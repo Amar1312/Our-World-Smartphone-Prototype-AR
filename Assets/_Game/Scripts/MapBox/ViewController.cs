@@ -4,6 +4,8 @@ using UnityEngine;
 using Mapbox;
 using Mapbox.Unity.Map;
 using Mapbox.Utils;
+using Mapbox.Unity.Location;
+using UnityEngine.UI;
 
 public class ViewController : MonoBehaviour
 {
@@ -16,9 +18,14 @@ public class ViewController : MonoBehaviour
 	public Vector2d _currentLatlong;
 	public float _zoomvalue;
 	public string _currentSearch;
+	public LocationProviderFactory _locationfactory;
+	public UpdateMapWithLocationProvider _updateMap;
 
 	[Header("GameObject for pinch")]
 	public List<GameObject> _PinchGameObject;
+
+	[Header("Control UpdateMap")]
+	public Toggle _ToggleUpdateMap;
 
 	private void Awake()
 	{
@@ -28,7 +35,8 @@ public class ViewController : MonoBehaviour
 	// Start is called before the first frame update
 	void Start()
 	{
-
+		_ToggleUpdateMap.onValueChanged.AddListener(UpdateMapToggle);
+		
 	}
 
 	// Update is called once per frame
@@ -45,8 +53,11 @@ public class ViewController : MonoBehaviour
 		_MapViews[index].SetActive(true);
 		_maps[index].SetCenterLatitudeLongitude(_currentLatlong);
 		_maps[index].SetZoom(_zoomvalue);
+		Debug.Log("ccheckkkk ::" + _maps[index].isActiveAndEnabled);
 		if (_maps[index].isActiveAndEnabled)
 			StartCoroutine(IemnumWaitFormap(index));
+		_locationfactory.mapManager = _maps[index];
+		_updateMap._map = _maps[index];
 
 		_PinchObj.target = _PinchGameObject[index].transform;
 
@@ -54,13 +65,17 @@ public class ViewController : MonoBehaviour
 			_PinchObj.AR = true;
 		else
 			_PinchObj.AR = false;
-
 	}
 
 	IEnumerator IemnumWaitFormap(int index)
 	{
 		yield return new WaitForSeconds(2.0f);
 		_maps[index].UpdateMap();
+	}
+
+	public void UpdateMapToggle(bool value)
+	{
+		_updateMap.enabled = value;
 	}
 
 }

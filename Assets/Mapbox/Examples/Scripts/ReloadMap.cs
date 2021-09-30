@@ -29,7 +29,7 @@
 		{
 			_cameraStartPos = _camera.transform.position;
 			_map = FindObjectOfType<AbstractMap>();
-			if(_map == null)
+			if (_map == null)
 			{
 				Debug.LogError("Error: No Abstract Map component found in scene.");
 				return;
@@ -39,12 +39,12 @@
 				_map.OnUpdated += () => { _zoomSlider.value = _map.Zoom; };
 				_zoomSlider.onValueChanged.AddListener(Reload);
 			}
-			if(_forwardGeocoder != null)
+			if (_forwardGeocoder != null)
 			{
 				_forwardGeocoder.OnGeocoderResponse += ForwardGeocoder_OnGeocoderResponse;
 			}
 			_heroBuildingSelectionUserInput = GetComponentsInChildren<HeroBuildingSelectionUserInput>();
-			if(_heroBuildingSelectionUserInput != null)
+			if (_heroBuildingSelectionUserInput != null)
 			{
 				for (int i = 0; i < _heroBuildingSelectionUserInput.Length; i++)
 				{
@@ -56,6 +56,7 @@
 
 		void ForwardGeocoder_OnGeocoderResponse(ForwardGeocodeResponse response)
 		{
+			Debug.Log("ForwardGeocoder response ::: 1");
 			if (null != response.Features && response.Features.Count > 0)
 			{
 				int zoom = _map.AbsoluteZoom;
@@ -65,6 +66,7 @@
 
 		void ForwardGeocoder_OnGeocoderResponse(ForwardGeocodeResponse response, bool resetCamera)
 		{
+			Debug.Log("ForwardGeocoder response :::");
 			if (response == null)
 			{
 				return;
@@ -78,16 +80,19 @@
 
 		void Reload(float value)
 		{
+			Debug.Log("Map reloaded :::");
 			if (_reloadRoutine != null)
 			{
 				StopCoroutine(_reloadRoutine);
 				_reloadRoutine = null;
 			}
-			_reloadRoutine = StartCoroutine(ReloadAfterDelay((int)value));
+			if (this.gameObject.activeInHierarchy)
+				_reloadRoutine = StartCoroutine(ReloadAfterDelay((int)value));
 		}
 
 		IEnumerator ReloadAfterDelay(int zoom)
 		{
+			Debug.Log("Map reload after delay :::");
 			yield return _wait;
 			_camera.transform.position = _cameraStartPos;
 			_map.UpdateMap(_map.CenterLatitudeLongitude, zoom);

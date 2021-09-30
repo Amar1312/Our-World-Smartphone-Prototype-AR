@@ -7,7 +7,7 @@
 	public class UpdateMapWithLocationProvider : MonoBehaviour
 	{
 		[SerializeField]
-		AbstractMap _map;
+		public AbstractMap _map;
 
 		ILocationProvider _locationProvider;
 		Vector3 _targetPosition;
@@ -82,7 +82,7 @@
 		//We do the actual interpolation in FixedUpdate(), since we're dealing with a rigidbody
 		void LateUpdate()
 		{
-			if (_isMapInitialized && _isLerping)
+			if (_isMapInitialized && _isLerping && _map.gameObject.activeInHierarchy)
 			{
 				//We want percentage = 0.0 when Time.time = _timeStartedLerping
 				//and percentage = 1.0 when Time.time = _timeStartedLerping + timeTakenDuringLerp

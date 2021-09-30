@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <LangVersion>8.0</LangVersion>
+    <LangVersion>latest</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -53,9 +53,6 @@
     <UnityVersion>2020.3.16f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="Assets\Mapbox\Core\mapbox-sdk-cs\Directions\Response\Annotation.cs" />
     <Compile Include="Assets\Mapbox\Examples\Scripts\LocationStatus.cs" />
     <Compile Include="Assets\Mapbox\Unity\DataContainers\TerrainColliderOptions.cs" />
@@ -66,7 +63,7 @@
     <Compile Include="Assets\Mapbox\Core\mapbox-sdk-cs\Platform\Cache\MemoryCache.cs" />
     <Compile Include="Assets\LeanTween\Framework\LeanTween.cs" />
     <Compile Include="Assets\Mapbox\Core\mapbox-sdk-cs\Geocoding\Response\Feature.cs" />
-    <Compile Include="Assets\_Game\Amar\Script\VideoPlayerManager.cs" />
+    <Compile Include="Assets\_Game\Scripts\MapBox\VideoPlayerManager.cs" />
     <Compile Include="Assets\Mapbox\Unity\Utilities\DontDestroyOnLoad.cs" />
     <Compile Include="Assets\Mapbox\Unity\Location\ILocationProvider.cs" />
     <Compile Include="Assets\Mapbox\Unity\MeshGeneration\Modifiers\GameObjectModifiers\PrefabModifier.cs" />
@@ -115,7 +112,7 @@
     <Compile Include="Assets\Mapbox\Unity\DataContainers\LocationPrefabCategoryOptions.cs" />
     <Compile Include="Assets\MapboxAR\Examples\ARTabletop\Scripts\ARTableTopCameraMovement.cs" />
     <Compile Include="Assets\Mapbox\Core\mapbox-sdk-cs\Utils\JsonConverters\LonLatToGeoCoordinateConverter.cs" />
-    <Compile Include="Assets\_Game\Amar\Script\UIZoomImage.cs" />
+    <Compile Include="Assets\_Game\Scripts\MapBox\UIZoomImage.cs" />
     <Compile Include="Assets\Mapbox\Unity\Map\TileProviders\TileErrorHandler.cs" />
     <Compile Include="Assets\LeanTween\Examples\Scripts\GeneralUISpace.cs" />
     <Compile Include="Assets\Mapbox\Unity\Location\LocationArrayEditorLocationProvider.cs" />
@@ -124,7 +121,6 @@
     <Compile Include="Assets\UnityFileDebug\Lib\Logger\Scripts\DebugWrapper.cs" />
     <Compile Include="Assets\FingerGestures\Samples\Scripts\Internal\StartMenu.cs" />
     <Compile Include="Assets\Mapbox\Examples\Scripts\PoiMarkerHelper.cs" />
-    <Compile Include="Assets\_Game\Amar\Script\loadbundle.cs" />
     <Compile Include="Assets\FingerGestures\Samples\Scripts\FingerEventsSamplePart2.cs" />
     <Compile Include="Assets\FingerGestures\Samples\Scripts\Internal\SwipeParticlesEmitter.cs" />
     <Compile Include="Assets\Mapbox\Examples\Scripts\LabelTextSetter.cs" />
@@ -139,7 +135,7 @@
     <Compile Include="Assets\Mapbox\Unity\SourceLayers\ISubLayerCustomStyleAtlasWithColorPallete.cs" />
     <Compile Include="Assets\Mapbox\Unity\LayerProperties\LayerProperties.cs" />
     <Compile Include="Assets\Mapbox\Unity\MeshGeneration\Modifiers\MeshModifiers\LoftModifier.cs" />
-    <Compile Include="Assets\_Game\Amar\Script\BehaviousController.cs" />
+    <Compile Include="Assets\_Game\Scripts\MapBox\BehaviousController.cs" />
     <Compile Include="Assets\_Game\Scripts\Intro Animations\RotateLogo.cs" />
     <Compile Include="Assets\MapboxAR\Unity\Ar\Utilities\PlotRoute.cs" />
     <Compile Include="Assets\Mapbox\Unity\SourceLayers\ILayer.cs" />
@@ -155,7 +151,7 @@
     <Compile Include="Assets\Mapbox\Core\mapbox-sdk-cs\Platform\IAsyncRequest.cs" />
     <Compile Include="Assets\FingerGestures\Toolbox\TBFingerDown.cs" />
     <Compile Include="Assets\LeanTween\Examples\Scripts\PathBezier.cs" />
-    <Compile Include="Assets\_Game\Amar\Script\Singleton.cs" />
+    <Compile Include="Assets\_Game\Scripts\MapBox\Singleton.cs" />
     <Compile Include="Assets\Mapbox\Core\mapbox-sdk-cs\MapMatching\MapMatchingParameters.cs" />
     <Compile Include="Assets\Mapbox\Core\mapbox-sdk-cs\Map\TileCover.cs" />
     <Compile Include="Assets\FingerGestures\Samples\Scripts\ToolboxFingerEventsSample.cs" />
@@ -198,11 +194,12 @@
     <Compile Include="Assets\Mapbox\Unity\Location\UnityLocationWrappers\MapboxLocationServiceUnityWrapper.cs" />
     <Compile Include="Assets\MapboxAR\Scripts\Camera\TouchCamera.cs" />
     <Compile Include="Assets\Mapbox\Unity\MeshGeneration\Data\KdTree\DistanceFunctions.cs" />
+    <Compile Include="Assets\_Game\Scripts\MapBox\loadbundle.cs" />
     <Compile Include="Assets\Mapbox\Unity\SourceLayers\ImageryLayer.cs" />
     <Compile Include="Assets\Mapbox\Core\mapbox-sdk-cs\MapMatching\Tracepoint.cs" />
     <Compile Include="Assets\Mapbox\Unity\SourceLayers\TerrainLayer.cs" />
     <Compile Include="Assets\Mapbox\Unity\MeshGeneration\Modifiers\ModifierStack.cs" />
-    <Compile Include="Assets\_Game\Amar\Script\RotationController.cs" />
+    <Compile Include="Assets\_Game\Scripts\MapBox\RotationController.cs" />
     <Compile Include="Assets\Mapbox\Unity\MeshGeneration\Modifiers\GameObjectModifiers\AddMonoBehavioursModifierType.cs" />
     <Compile Include="Assets\Mapbox\Unity\MeshGeneration\Factories\TerrainStrategies\TerrainStrategy.cs" />
     <Compile Include="Assets\Mapbox\Core\mapbox-sdk-cs\Platform\TileJSON\TileJSON.cs" />
@@ -239,13 +236,13 @@
     <Compile Include="Assets\Mapbox\Examples\Scripts\PositionWithLocationProvider.cs" />
     <Compile Include="Assets\FingerGestures\Toolbox\TBDrag.cs" />
     <Compile Include="Assets\Mapbox\Core\mapbox-sdk-cs\Map\Tile.cs" />
-    <Compile Include="Assets\_Game\Amar\Script\SceneController.cs" />
+    <Compile Include="Assets\_Game\Scripts\MapBox\SceneController.cs" />
     <Compile Include="Assets\Mapbox\Unity\Map\Strategies\MapPlacementAtLocationCenterStrategy.cs" />
     <Compile Include="Assets\Mapbox\Unity\LayerProperties\ElevationLayerProperties.cs" />
     <Compile Include="Assets\CharacterCreator\Scripts\CharacterCreatorScript.cs" />
     <Compile Include="Assets\Mapbox\Core\mapbox-sdk-cs\Tokens\MapboxToken.cs" />
     <Compile Include="Assets\LeanTween\Examples\Scripts\TestingZLegacyExt.cs" />
-    <Compile Include="Assets\_Game\Amar\Script\Template.cs" />
+    <Compile Include="Assets\_Game\Scripts\MapBox\Template.cs" />
     <Compile Include="Assets\Mapbox\Unity\MeshGeneration\Interfaces\LayerVisualizerBase.cs" />
     <Compile Include="Assets\Mapbox\Unity\LayerProperties\VectorSubLayerProperties.cs" />
     <Compile Include="Assets\Mapbox\Core\mapbox-sdk-cs\Directions\Response\Route.cs" />
@@ -280,7 +277,7 @@
     <Compile Include="Assets\Mapbox\Unity\SourceLayers\SubLayerSimpleStyle.cs" />
     <Compile Include="Assets\FingerGestures\SkeletonCode\CSharpSkeleton.cs" />
     <Compile Include="Assets\Mapbox\Unity\Map\Strategies\MapPlacementAtTileCenterStrategy.cs" />
-    <Compile Include="Assets\_Game\Amar\Script\ArTapToPlaceObject.cs" />
+    <Compile Include="Assets\_Game\Scripts\MapBox\ArTapToPlaceObject.cs" />
     <Compile Include="Assets\Mapbox\Unity\Map\Interfaces\ITileProvider.cs" />
     <Compile Include="Assets\LeanTween\Framework\LTDescrOptional.cs" />
     <Compile Include="Assets\Mapbox\Unity\SourceLayers\ISubLayerExtrusionOptions.cs" />
@@ -313,7 +310,7 @@
     <Compile Include="Assets\MapboxAR\Unity\Ar\AverageHeadingAlignmentStrategy.cs" />
     <Compile Include="Assets\Mapbox\Unity\Location\LocationSmoothing\KalmanFilter.cs" />
     <Compile Include="Assets\Mapbox\Unity\SourceLayers\ISubLayerCustomStyle.cs" />
-    <Compile Include="Assets\_Game\Amar\Script\PlayerManager.cs" />
+    <Compile Include="Assets\_Game\Scripts\MapBox\PlayerManager.cs" />
     <Compile Include="Assets\Mapbox\Core\mapbox-sdk-cs\Platform\HTTPRequestNonThreaded.cs" />
     <Compile Include="Assets\Mapbox\Unity\MeshGeneration\Data\KdTree\NearestNeighbour.cs" />
     <Compile Include="Assets\Mapbox\Core\mapbox-sdk-cs\Platform\Response.cs" />
@@ -411,7 +408,7 @@
     <Compile Include="Assets\Mapbox\Core\mapbox-sdk-cs\Utils\GeoCoordinateBounds.cs" />
     <Compile Include="Assets\Mapbox\Unity\LayerProperties\VectorFilterOptions.cs" />
     <Compile Include="Assets\Mapbox\Unity\MeshGeneration\Modifiers\MeshModifiers\LineMeshModifier.cs" />
-    <Compile Include="Assets\_Game\Amar\Script\UIController.cs" />
+    <Compile Include="Assets\_Game\Scripts\MapBox\UIController.cs" />
     <Compile Include="Assets\Mapbox\Unity\Map\TileProviders\RangeAroundTransformTileProvider.cs" />
     <Compile Include="Assets\Mapbox\Core\mapbox-sdk-cs\Map\RawPngRasterTile.cs" />
     <Compile Include="Assets\FingerGestures\Samples\Scripts\AdvancedPinchRotationSample.cs" />
@@ -448,7 +445,7 @@
     <Compile Include="Assets\Mapbox\Unity\LayerProperties\PrefabItemOptions.cs" />
     <Compile Include="Assets\Mapbox\Unity\Telemetry\TelemetryFallback.cs" />
     <Compile Include="Assets\LeanTween\Examples\Scripts\PathSplineTrack.cs" />
-    <Compile Include="Assets\SimpleJSON.cs" />
+    <Compile Include="Assets\Scripts\SimpleJSON.cs" />
     <Compile Include="Assets\Mapbox\Unity\Telemetry\TelemetryWebgl.cs" />
     <Compile Include="Assets\Hierarchy 2\Runtime\CustomRowItem.cs" />
     <Compile Include="Assets\Mapbox\Unity\MeshGeneration\Modifiers\MeshGenerationBase.cs" />
@@ -484,7 +481,6 @@
     <Compile Include="Assets\Mapbox\Unity\Location\TransformLocationProvider.cs" />
     <Compile Include="Assets\LeanTween\Examples\Scripts\PathSpline2d.cs" />
     <Compile Include="Assets\FingerGestures\Samples\TouchPhaseVisualizer.cs" />
-    <Compile Include="Assets\_Game\Amar\Script\RotateObject.cs" />
     <Compile Include="Assets\Mapbox\Unity\MeshGeneration\Modifiers\ModifierStackBase.cs" />
     <Compile Include="Assets\Mapbox\Unity\MeshGeneration\Modifiers\MeshModifiers\PolygonMeshModifier.cs" />
     <Compile Include="Assets\Mapbox\Core\mapbox-sdk-cs\Platform\Resource.cs" />
@@ -495,7 +491,7 @@
     <Compile Include="Assets\Mapbox\Core\mapbox-sdk-cs\Map\RetinaRasterTile.cs" />
     <Compile Include="Assets\CharacterCreator\Scripts\CameraController.cs" />
     <Compile Include="Assets\LeanTween\Examples\Scripts\PathSplinePerformance.cs" />
-    <Compile Include="Assets\_Game\Amar\Script\ViewController.cs" />
+    <Compile Include="Assets\_Game\Scripts\MapBox\ViewController.cs" />
     <Compile Include="Assets\Mapbox\Unity\MeshGeneration\Data\UnityTile.cs" />
     <Compile Include="Assets\Mapbox\Unity\Utilities\VectorExtensions.cs" />
     <Compile Include="Assets\FingerGestures\Samples\Scripts\Internal\DragTrail.cs" />
@@ -504,6 +500,7 @@
     <Compile Include="Assets\Mapbox\Unity\SourceLayers\ISubLayerCoreOptions.cs" />
     <Compile Include="Assets\Mapbox\Examples\6_ZoomableMap\Scripts\SetCameraHeight.cs" />
     <Compile Include="Assets\FingerGestures\Samples\Scripts\ToolboxOneFingerGestureSample.cs" />
+    <Compile Include="Assets\_Game\Scripts\MapBox\RotateObject.cs" />
     <Compile Include="Assets\Mapbox\Unity\MeshGeneration\Modifiers\ModifierBase.cs" />
     <Compile Include="Assets\Mapbox\Unity\DataContainers\LineGeometryOptions.cs" />
     <Compile Include="Assets\FingerGestures\Toolbox\TBFingerUp.cs" />
@@ -553,6 +550,7 @@
     <None Include="Assets\Mapbox\Core\Plugins\Mapbox\vector-tile-cs\portable-net45+uap10\Mapbox.VectorTile.PbfReader.dll" />
     <None Include="Assets\MapboxAR\Examples\ARTabletop\Shaders\ClipBox\LICENSE.txt" />
     <None Include="Assets\Mapbox\Unity\Location\ExampleGpsTraces\LocationProviderAndroidNative.txt" />
+    <None Include="Assets\StreamingAssets\WrldResources\WelcomeConfig.txt" />
     <None Include="Assets\Mapbox\Examples\2_AstronautGame\AstronautGame\Building\CharacterBuildingShader.shader" />
     <None Include="Assets\LeanTween\ReadMe.txt" />
     <None Include="Assets\UnityFileDebug\README.txt" />
@@ -589,12 +587,10 @@
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Surface.cginc" />
     <None Include="Assets\Mapbox\README.txt" />
     <None Include="Assets\MapboxAR\link.xml" />
-    <None Include="Assets\UMA\Whats New in UMA.txt" />
     <None Include="Assets\Fonts\Jupiter\LICENSE.txt" />
     <None Include="Assets\Mapbox\Core\Plugins\Mapbox\vector-tile-cs\portable-net45+uap10\Mapbox.VectorTile.ExtensionMethods.dll" />
     <None Include="Assets\Mapbox\Core\Plugins\Mapbox\vector-tile-cs\portable-net45+uap10\Mapbox.VectorTile.VectorTileReader.dll" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
-    <None Include="Assets\StreamingAssets\WrldResources\WelcomeConfig.txt" />
     <None Include="Assets\LeanTween\Examples\Archived\2dUnlitWithFade.shader" />
     <None Include="Assets\Mapbox\Core\Plugins\link.xml" />
     <None Include="Assets\Mapbox\Shaders\RasterWithTransparencyShader.shader" />

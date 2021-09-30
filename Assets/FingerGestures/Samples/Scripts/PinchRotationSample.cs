@@ -177,7 +177,7 @@ public class PinchRotationSample : SampleBase
 			// change the scale of the target based on the pinch delta value
 			target.transform.localScale += delta * pinchScaleFactor * Vector3.one * Time.deltaTime;
 			//  int value = (int)target.transform.localScale.x;
-			_scaletext.text = System.Math.Round(target.transform.localScale.x, 2) * 100 + "%";
+			//_scaletext.text = System.Math.Round(target.transform.localScale.x, 2) * 100 + "%";
 		}
 	}
 
@@ -186,7 +186,7 @@ public class PinchRotationSample : SampleBase
 		if (Pinching && target != null)
 		{
 			Pinching = false;
-			_scaletext.text = "";
+			//_scaletext.text = "";
 		}
 	}
 

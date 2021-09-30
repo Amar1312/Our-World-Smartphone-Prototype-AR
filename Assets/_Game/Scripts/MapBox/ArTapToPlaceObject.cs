@@ -105,6 +105,8 @@ public class ArTapToPlaceObject : MonoBehaviour
 		{
 			objectToPlace.SetActive(true);
 			_MapCamera.SetActive(true);
+			_MapCamera.transform.position = placementPose.position;
+			_MapCamera.transform.rotation = placementPose.rotation;
 			objectToPlace.transform.position = placementPose.position;
 			objectToPlace.transform.rotation = placementPose.rotation;
 		}

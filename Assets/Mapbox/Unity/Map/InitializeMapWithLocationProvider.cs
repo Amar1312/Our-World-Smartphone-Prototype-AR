@@ -10,7 +10,14 @@
 		AbstractMap _map;
 
 		ILocationProvider _locationProvider;
-    
+		public PinchRotationSample _PinchRotationSmaple;
+
+		private void OnEnable()
+		{
+			//_PinchRotationSmaple.gameObject.transform.position = _map.transform.position;
+			//_PinchRotationSmaple.gameObject.transform.rotation = _map.transform.rotation;
+		}
+
 		private void Awake()
 		{
 			// Prevent double initialization of the map. 

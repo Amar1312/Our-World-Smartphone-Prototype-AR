@@ -1,5 +1,8 @@
 
 using System.Linq;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
 namespace Mapbox.Examples
 {
@@ -10,6 +13,9 @@ namespace Mapbox.Examples
 	[ExecuteInEditMode]
 	public class LoadingPanelController : MonoBehaviour
 	{
+		public GameObject _mapObject;
+		public bool AR, Once;
+
 		[SerializeField]
 		GameObject _content;
 
@@ -43,7 +49,15 @@ namespace Mapbox.Examples
 
 				if (s == ModuleState.Finished)
 				{
-					_content.SetActive(false);
+					//_content.SetActive(false);
+					if (AR && !Once)
+					{
+						StartCoroutine(IenmStartWait());
+						Once = true;
+					}
+						
+					else
+						_content.SetActive(false);
 				}
 				else if (s == ModuleState.Working)
 				{
@@ -54,6 +68,14 @@ namespace Mapbox.Examples
 				}
 
 			};
+		}
+
+		IEnumerator IenmStartWait()
+		{
+			yield return new WaitForSeconds(3.0f);
+			_mapObject.SetActive(false);
+			_content.SetActive(false);
+
 		}
 
 		void OnEditorPreviewEnabled()
