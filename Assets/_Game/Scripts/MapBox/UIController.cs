@@ -12,7 +12,7 @@ namespace Amar
 		public GameObject _animatior;
 		public GameObject _readyplace;
 		public Button ButtonPlaceobject;
-		public GameObject ShowRecord;
+		public GameObject CurrentMap;
 		public bool once;
 
 		private Coroutine _readyco;

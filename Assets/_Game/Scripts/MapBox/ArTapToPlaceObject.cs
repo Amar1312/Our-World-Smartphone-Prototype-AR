@@ -105,8 +105,11 @@ public class ArTapToPlaceObject : MonoBehaviour
 		{
 			objectToPlace.SetActive(true);
 			_MapCamera.SetActive(true);
+			_MapCamera.transform.position = placementPose.position;
+			_MapCamera.transform.rotation = placementPose.rotation;
 			objectToPlace.transform.position = placementPose.position;
 			objectToPlace.transform.rotation = placementPose.rotation;
+			ViewController.Instance.CheckMapForPlayer();
 		}
 			//_placedObj = Instantiate(objectToPlace, placementPose.position, placementPose.rotation);
 			
@@ -114,6 +117,8 @@ public class ArTapToPlaceObject : MonoBehaviour
 
 #if UNITY_EDITOR
 		_placedObj = Instantiate(objectToPlace, placementPose.position, placementPose.rotation);
+
+
 #endif
 	}
 

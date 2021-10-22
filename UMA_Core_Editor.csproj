@@ -78,8 +78,8 @@
     <Compile Include="Assets\UMA\Core\Editor\Scripts\DNAConverterListPropertyDrawer.cs" />
     <Compile Include="Assets\UMA\Core\Editor\Scripts\TreeViewWithTreeModel.cs" />
     <Compile Include="Assets\UMA\Core\Editor\Extensions\DynamicCharacterSystem\DynamicCharacterAvatarEditor.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Scripts\TreeElementUtility.cs" />
     <Compile Include="Assets\UMA\Core\Editor\Scripts\UMAAnimationTargetRenamer.cs" />
+    <Compile Include="Assets\UMA\Core\Editor\Scripts\TreeElementUtility.cs" />
     <Compile Include="Assets\UMA\Core\Editor\Scripts\BuildPreprocessor.cs" />
     <Compile Include="Assets\UMA\Core\Editor\Scripts\UMASlotProcessingUtil.cs" />
     <Compile Include="Assets\UMA\Core\Editor\Scripts\CharacterBaseEditor.cs" />
@@ -166,8 +166,8 @@
     <Compile Include="Assets\UMA\Core\Editor\Extensions\DynamicCharacterSystem\pDCSRecipeEditor.cs" />
     <Compile Include="Assets\UMA\Core\Editor\Scripts\UMAMeshDataPropertyDrawer.cs" />
     <Compile Include="Assets\UMA\Core\Editor\Scripts\UMAGeneratorBuiltinEditor.cs" />
-    <Compile Include="Assets\UMA\Core\Editor\Scripts\CodeGenTemplate.cs" />
     <Compile Include="Assets\UMA\Core\Editor\Scripts\UMABonePosePropertyDrawer.cs" />
+    <Compile Include="Assets\UMA\Core\Editor\Scripts\CodeGenTemplate.cs" />
     <Compile Include="Assets\UMA\Core\Editor\Scripts\UMAAvatarLoadSaveMenuItems.cs" />
     <Compile Include="Assets\UMA\Core\Editor\Scripts\UMAAssetTreeView.cs" />
     <Compile Include="Assets\UMA\Core\Editor\Extensions\DynamicCharacterSystem\DynamicRaceLibraryEditor.cs" />
@@ -441,6 +441,9 @@
     <Reference Include="log4netPlastic">
       <HintPath>Library\PackageCache\com.unity.collab-proxy@1.7.1\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
     </Reference>
+    <Reference Include="DOTween">
+      <HintPath>Assets\Plugins\Demigiant\DOTween\DOTween.dll</HintPath>
+    </Reference>
     <Reference Include="Mapbox.VectorTile.ExtensionMethods">
       <HintPath>Assets\Mapbox\Core\Plugins\Mapbox\vector-tile-cs\net46\Mapbox.VectorTile.ExtensionMethods.dll</HintPath>
     </Reference>
@@ -458,6 +461,9 @@
     </Reference>
     <Reference Include="Unity.Plastic.Antlr3.Runtime">
       <HintPath>Library\PackageCache\com.unity.collab-proxy@1.7.1\Lib\Editor\PlasticSCM\Unity.Plastic.Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTweenEditor">
+      <HintPath>Assets\Plugins\Demigiant\DOTween\Editor\DOTweenEditor.dll</HintPath>
     </Reference>
     <Reference Include="Mapbox.VectorTile.PbfReader">
       <HintPath>Assets\Mapbox\Core\Plugins\Mapbox\vector-tile-cs\net46\Mapbox.VectorTile.PbfReader.dll</HintPath>
@@ -834,11 +840,11 @@
     <Reference Include="UnityEngine.UI">
       <HintPath>Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.TestRunner">
-      <HintPath>Library\ScriptAssemblies\UnityEngine.TestRunner.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEditor.TestRunner">
       <HintPath>Library\ScriptAssemblies\UnityEditor.TestRunner.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TestRunner">
+      <HintPath>Library\ScriptAssemblies\UnityEngine.TestRunner.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

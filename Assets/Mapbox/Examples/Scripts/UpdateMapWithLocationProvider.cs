@@ -7,7 +7,7 @@
 	public class UpdateMapWithLocationProvider : MonoBehaviour
 	{
 		[SerializeField]
-		AbstractMap _map;
+		public AbstractMap _map;
 
 		ILocationProvider _locationProvider;
 		Vector3 _targetPosition;

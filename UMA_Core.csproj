@@ -126,8 +126,8 @@
     <Compile Include="Assets\UMA\Core\Scripts\DNA\Legacy\UMADnaTutorial_Generated.cs" />
     <Compile Include="Assets\UMA\Core\Scripts\DNAPlugins\SkeletonDNAConverterPlugin.cs" />
     <Compile Include="Assets\UMA\Core\Extensions\Timeline\UmaDna\UmaDnaTrack.cs" />
-    <Compile Include="Assets\UMA\Core\Extensions\Timeline\UmaWardrobe\UmaWardrobeBehaviour.cs" />
     <Compile Include="Assets\UMA\Core\StandardAssets\UMA\Scripts\UMARenderTextureManager.cs" />
+    <Compile Include="Assets\UMA\Core\Extensions\Timeline\UmaWardrobe\UmaWardrobeBehaviour.cs" />
     <Compile Include="Assets\UMA\Core\Extensions\DynamicCharacterSystem\Scripts\DownloadingAssetsList.cs" />
     <Compile Include="Assets\UMA\Core\StandardAssets\UMA\Scripts\UMADefaultMeshCombiner.cs" />
     <Compile Include="Assets\UMA\Core\Scripts\UMAAssetIndexer.cs" />
@@ -171,8 +171,8 @@
     <Compile Include="Assets\UMA\Core\Scripts\UMAMountedItem.cs" />
     <Compile Include="Assets\UMA\Core\StandardAssets\UMA\Scripts\UMAFastMeshCombiner.cs" />
     <Compile Include="Assets\UMA\Core\Scripts\UMAColorFader.cs" />
-    <Compile Include="Assets\UMA\Core\StandardAssets\UMA\Scripts\SkinnedMeshCombiner.cs" />
     <Compile Include="Assets\UMA\Core\StandardAssets\UMA\Scripts\DynamicDNAConverterBehaviourBase.cs" />
+    <Compile Include="Assets\UMA\Core\StandardAssets\UMA\Scripts\SkinnedMeshCombiner.cs" />
     <Compile Include="Assets\UMA\Core\Scripts\DNA\Legacy\UMADna.cs" />
     <Compile Include="Assets\UMA\Core\StandardAssets\UMA\Scripts\UMAEvents.cs" />
     <Compile Include="Assets\UMA\Core\Scripts\DynamicDNAConverterController.cs" />
@@ -184,9 +184,9 @@
     <Compile Include="Assets\UMA\Core\StandardAssets\UMA\Scripts\UMADynamicExpressionBonePose.cs" />
     <Compile Include="Assets\UMA\Core\Extensions\DynamicCharacterSystem\Scripts\UMARandomizer.cs" />
     <Compile Include="Assets\UMA\Core\StandardAssets\UMA\Scripts\TextureProcessBaseCoroutine.cs" />
-    <Compile Include="Assets\UMA\Core\StandardAssets\UMA\Scripts\UMARecipeBase.cs" />
     <Compile Include="Assets\UMA\Core\Extensions\Timeline\UmaDna\UmaDnaMixerBehaviour.cs" />
     <Compile Include="Assets\UMA\Core\Extensions\Timeline\UmaRace\UmaRaceBehaviour.cs" />
+    <Compile Include="Assets\UMA\Core\StandardAssets\UMA\Scripts\UMARecipeBase.cs" />
     <Compile Include="Assets\UMA\Core\StandardAssets\UMA\Scripts\TwistBones.cs" />
     <Compile Include="Assets\UMA\Core\StandardAssets\UMA\Scripts\INameProvider.cs" />
     <Compile Include="Assets\UMA\Core\Extensions\DynamicCharacterSystem\Scripts\DynamicCharacterSystem.cs" />
@@ -226,8 +226,8 @@
     <Compile Include="Assets\UMA\Core\Scripts\OverlayLibrary.cs" />
     <Compile Include="Assets\UMA\Core\Scripts\DNAEvaluatorList.cs" />
     <Compile Include="Assets\UMA\Core\StandardAssets\UMA\Scripts\BinaryAssetWrapper.cs" />
-    <Compile Include="Assets\UMA\Core\StandardAssets\Extensions\UMAPhysics\UMAPhysicsSlotDefinition.cs" />
     <Compile Include="Assets\UMA\Core\Extensions\DynamicCharacterSystem\UMAAssetBundleManager\GUI\ReadOnlyAttribute.cs" />
+    <Compile Include="Assets\UMA\Core\StandardAssets\Extensions\UMAPhysics\UMAPhysicsSlotDefinition.cs" />
     <Compile Include="Assets\UMA\Core\StandardAssets\UMA\Scripts\MorphSetDnaAsset.cs" />
     <Compile Include="Assets\UMA\Core\Extensions\DynamicCharacterSystem\Scripts\UMAWardrobeRecipe.cs" />
     <Compile Include="Assets\UMA\Core\Scripts\UMAPackedRecipeBase.cs" />
@@ -484,6 +484,9 @@
     <Reference Include="log4netPlastic">
       <HintPath>Library\PackageCache\com.unity.collab-proxy@1.7.1\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
     </Reference>
+    <Reference Include="DOTween">
+      <HintPath>Assets\Plugins\Demigiant\DOTween\DOTween.dll</HintPath>
+    </Reference>
     <Reference Include="Mapbox.VectorTile.ExtensionMethods">
       <HintPath>Assets\Mapbox\Core\Plugins\Mapbox\vector-tile-cs\net46\Mapbox.VectorTile.ExtensionMethods.dll</HintPath>
     </Reference>
@@ -501,6 +504,9 @@
     </Reference>
     <Reference Include="Unity.Plastic.Antlr3.Runtime">
       <HintPath>Library\PackageCache\com.unity.collab-proxy@1.7.1\Lib\Editor\PlasticSCM\Unity.Plastic.Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTweenEditor">
+      <HintPath>Assets\Plugins\Demigiant\DOTween\Editor\DOTweenEditor.dll</HintPath>
     </Reference>
     <Reference Include="Mapbox.VectorTile.PbfReader">
       <HintPath>Assets\Mapbox\Core\Plugins\Mapbox\vector-tile-cs\net46\Mapbox.VectorTile.PbfReader.dll</HintPath>
