@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <LangVersion>8.0</LangVersion>
+    <LangVersion>latest</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -53,10 +53,6 @@
     <UnityVersion>2020.3.16f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Assets\Plugins\NativeGallery\Editor\NGPostProcessBuild.cs" />
     <Compile Include="Assets\Plugins\NativeShare\Editor\NSPostProcessBuild.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -861,6 +857,14 @@
     <ProjectReference Include="Addressable_Editor.csproj">
       <Project>{A93F7737-D7E3-D6F9-106E-13D32ECF5034}</Project>
       <Name>Addressable_Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="NativeGallery.Editor.csproj">
+      <Project>{E42F235E-BF41-3796-0232-CE6F66FB5036}</Project>
+      <Name>NativeGallery.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="NativeGallery.Runtime.csproj">
+      <Project>{154F9254-7D72-A0F3-314F-0C35CCA34BEF}</Project>
+      <Name>NativeGallery.Runtime</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

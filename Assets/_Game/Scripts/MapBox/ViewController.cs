@@ -6,6 +6,7 @@ using Mapbox.Unity.Map;
 using Mapbox.Utils;
 using Mapbox.Unity.Location;
 using UnityEngine.UI;
+using System;
 
 public class ViewController : MonoBehaviour
 {
@@ -103,5 +104,8 @@ public class ViewController : MonoBehaviour
 	{
 		_updateMap.enabled = value;
 	}
+
+
+
 
 }
